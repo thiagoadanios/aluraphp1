@@ -1,10 +1,12 @@
 <?php
+//ini_set('display_errors', 1);
 include("header.php");
-
-$nome = $_GET["nome"];
-$preco = $_GET["preco"];
+$nome = isset($_GET['nome']) ? $_GET['nome'] : 'valor padrão';
+$preco = isset($_GET['preco']) ? $_POST['preco'] : 'valor padrão';
+echo "{$nome} , {$preco}";
 $query = "INSERT INTO PRODUTOS (NOME, PRECO) VALUES ('{$nome}', {$preco});";
-$conexao = mysqli_connect("localhost", "root","root", "loja");
+
+$conexao = mysqli_connect("localhost", "root","root", "mysql");
 
 	if (mysqli_query($conexao, $query)){
 
