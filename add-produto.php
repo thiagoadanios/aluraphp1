@@ -1,11 +1,11 @@
 <?php  include("header.php");  ?>
+<?php include ("conexao.php") 
+?>
+
 
 <?php
-$conexao = mysqli_connect("localhost", "root","root", "loja");
 $nome = isset($_GET['nome']) ? $_GET['nome'] : 'valor padrão';
 $preco = (isset($_GET['preco'])  && is_numeric($_GET['preco'])) ? $_GET['preco']  : 'valor padrão';
-
-echo $preco;
 
 function InsereProduto($conexao, $nome, $preco)  : int {
 	$query = "INSERT INTO produtos (nome, preco) VALUES ('{$nome}', {$preco});";

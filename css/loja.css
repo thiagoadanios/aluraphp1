@@ -8,8 +8,17 @@ body {
 	opacity:  0.8 !important;
 }
 .principal {
-    text-align: center;
+   /*  text-align: center; */
     padding: 40px 15px;
     width: 500px;
     margin: 0 auto;
 }
+.principal h1 {
+	text-align: center;
+}
+
+.text-success, .text-danger {
+    text-align:  center;
+}
+
+
