@@ -1,5 +1,10 @@
 <?php include ("header.php"); ?>
 <?php include ("conexao.php") ;
+if(!$conexao){
+
+echo "erro, sabão";
+} else {
+
 $result = mysqli_query($conexao, "select * from produtos");
 ?>
 
@@ -25,4 +30,4 @@ $result = mysqli_query($conexao, "select * from produtos");
 	</table>
 </content>
 
-<?php include ("footer.php"); ?>
+<?php } include ("footer.php"); ?>
