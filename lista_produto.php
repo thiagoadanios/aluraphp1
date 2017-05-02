@@ -21,7 +21,7 @@ $result = mysqli_query($conexao, "select * from produtos");
 					<td><?= $produto['nome'] ?></td>
 					<td>R$: <?= $produto['preco'] ?></td>
 					<td style="padding-left: 15px">
-						<span class="glyphicon glyphicon-remove" alt="ola"></span>
+						<a href="remover.php?id=<?= $produto['id'] ?>"><span class="glyphicon glyphicon-remove" alt="ola"></span></a>
 						<span class="glyphicon glyphicon-edit"></span>
 					</td>
 				</tr>
