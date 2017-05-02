@@ -11,6 +11,7 @@ $result = mysqli_query($conexao, "select * from produtos");
 			<th>#</th>
 			<th>Nome</th>
 			<th>Preço</th>
+			<th>Ações</th>
 		</tr>
 		</thead>
 			<tbody>
@@ -18,7 +19,11 @@ $result = mysqli_query($conexao, "select * from produtos");
 				<tr>
 					<th><?= $produto['id'] ?></th>
 					<td><?= $produto['nome'] ?></td>
-					<td><?= $produto['preco'] ?></td>
+					<td>R$: <?= $produto['preco'] ?></td>
+					<td style="padding-left: 15px">
+						<span class="glyphicon glyphicon-remove" alt="ola"></span>
+						<span class="glyphicon glyphicon-edit"></span>
+					</td>
 				</tr>
 			<?php } ?>
 			</tbody>
