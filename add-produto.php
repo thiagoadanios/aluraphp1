@@ -18,12 +18,12 @@ try {
 
 ?>
 	
-	<p class="text-success"> Produto
+	<p class="alert alert-success"> Produto
 		<?=$nome;?>, <?=$preco;?> Adicionado com Sucesso
 	</p>
 <?php } else { ?>
 
-	<p class="text-danger"> <?=$nome?> Produto não foi adcionado</p>
+	<p class="alert alert-danger"> <?=$nome?> Produto não foi adcionado</p>
 
 <?php
 }
