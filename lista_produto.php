@@ -1,10 +1,9 @@
 <?php include ("header.php"); ?>
 <?php include ("conexao.php") ;
 if(!$conexao){
-	echo "erro, sabão";
+	echo "erro";
 } else {
-
-$result = mysqli_query($conexao, "select * from produtos "); // LIMIT 10 OFFSET 5
+	$result = mysqli_query($conexao, "select * from produtos "); // LIMIT 10 OFFSET 5
 ?>
 
 <content  class="container">
@@ -26,7 +25,7 @@ $result = mysqli_query($conexao, "select * from produtos "); // LIMIT 10 OFFSET 
 			<td>R$: <?= $produto['preco'] ?></td>
 			<td style="padding-left: 15px">
 				<a href="remover.php?id=<?= $produto['id'] ?>"><span class="glyphicon glyphicon-remove" alt="ola"></span></a>
-				<span class="glyphicon glyphicon-edit"></span>
+				<a href="formulario.php?id=<?= $produto['id'] ?>&editar"><span class="glyphicon glyphicon-edit"></span></a>
 			</td>
 		</tr>
 		<?php endwhile; ?>
