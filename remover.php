@@ -1,5 +1,6 @@
-<?php include("header.php"); 
-include ("conexao.php")
+<?php 
+include("header.php"); 
+include ("conexao.php");
 ?>
 
 <?php 
