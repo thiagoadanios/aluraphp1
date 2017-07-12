@@ -1,6 +1,5 @@
 <?php  include("header.php");  ?>
-<?php include ("conexao.php") 
-?>
+<?php include ("conexao.php"); ?>
 
 
 <?php
@@ -13,7 +12,6 @@ function InsereProduto($conexao, $nome, $preco)  : int {
 }
 
 try {
-//$mysqli = new mysqi
 
 	if (InsereProduto($conexao, $nome, $preco)){
 
